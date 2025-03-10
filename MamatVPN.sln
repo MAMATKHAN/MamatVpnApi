@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamatVPN.DAL", "MamatVPN.DAL\MamatVPN.DAL.csproj", "{7233CF9D-6FB7-4DB1-84A9-8676B1369F28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamatVPN.BLL", "MamatVPN.BLL\MamatVPN.BLL.csproj", "{2BEC3E3C-4F07-4092-9000-54D15D1A1F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamatVPN.Web", "MamatVPN.Web\MamatVPN.Web.csproj", "{57F2B65E-9503-48E4-B897-2AF2D9DE92A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7233CF9D-6FB7-4DB1-84A9-8676B1369F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7233CF9D-6FB7-4DB1-84A9-8676B1369F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7233CF9D-6FB7-4DB1-84A9-8676B1369F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7233CF9D-6FB7-4DB1-84A9-8676B1369F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BEC3E3C-4F07-4092-9000-54D15D1A1F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEC3E3C-4F07-4092-9000-54D15D1A1F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEC3E3C-4F07-4092-9000-54D15D1A1F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEC3E3C-4F07-4092-9000-54D15D1A1F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F2B65E-9503-48E4-B897-2AF2D9DE92A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F2B65E-9503-48E4-B897-2AF2D9DE92A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F2B65E-9503-48E4-B897-2AF2D9DE92A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F2B65E-9503-48E4-B897-2AF2D9DE92A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
