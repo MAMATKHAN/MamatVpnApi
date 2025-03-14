@@ -12,41 +12,41 @@ namespace MamatVPN.DAL.Migratioons
     {
         public override void Up()
         {
-            Create.Table("locations")
-                .WithColumn("id").AsInt64().PrimaryKey("loactions_pk").Identity()
-                .WithColumn("name").AsString().NotNullable()
-                .WithColumn("image").AsBinary()
-                .WithColumn("image_name");
+            Create.Table("Locations")
+                .WithColumn("Id").AsInt64().PrimaryKey("loactions_pk").Identity()
+                .WithColumn("Name").AsString().NotNullable()
+                .WithColumn("Image").AsBinary()
+                .WithColumn("ImageName");
 
-            Create.Table("servers")
-                .WithColumn("id").AsInt64().PrimaryKey("servers_pk").Identity()
-                .WithColumn("name").AsString().NotNullable()
-                .WithColumn("ip_address").AsString().NotNullable()
-                .WithColumn("location_id").AsInt64().ForeignKey("servers_locations_fk", "location", "id").NotNullable();
+            Create.Table("Servers")
+                .WithColumn("Id").AsInt64().PrimaryKey("servers_pk").Identity()
+                .WithColumn("Name").AsString().NotNullable()
+                .WithColumn("IpAddress").AsString().NotNullable()
+                .WithColumn("LocationId").AsInt64().ForeignKey("servers_locations_fk", "Locations", "Id").NotNullable();
 
-            Create.Table("users")
-                .WithColumn("id").AsInt64().PrimaryKey("users_pk").Identity()
-                .WithColumn("login").AsString().NotNullable()
-                .WithColumn("password").AsString().NotNullable()
-                .WithColumn("created_on").AsDateTimeOffset().NotNullable()
-                .WithColumn("modified_on").AsDateTimeOffset()
-                .WithColumn("created_by").AsInt64().ForeignKey("users_created_by_fk", "users", "id").NotNullable()
-                .WithColumn("modified_by").AsInt64().ForeignKey("users_modified_by_fk", "users", "id");
+            Create.Table("Users")
+                .WithColumn("Id").AsInt64().PrimaryKey("users_pk").Identity()
+                .WithColumn("Login").AsString().NotNullable()
+                .WithColumn("Password").AsString().NotNullable()
+                .WithColumn("CreatedOn").AsDateTimeOffset().NotNullable()
+                .WithColumn("ModifiedOn").AsDateTimeOffset()
+                .WithColumn("CreatedBy").AsInt64().ForeignKey("users_created_by_fk", "Users", "Id").NotNullable()
+                .WithColumn("ModifiedBy").AsInt64().ForeignKey("users_modified_by_fk", "Users", "Id");
 
-            Create.Table("sessions")
-                .WithColumn("id").AsInt64().PrimaryKey("sessions_pk").Identity()
-                .WithColumn("server_id").AsInt64().ForeignKey("sessions_servers_fk", "servers", "id").NotNullable()
-                .WithColumn("user_id").AsInt64().ForeignKey("sessions_users_fk", "users", "id").NotNullable()
-                .WithColumn("started_on").AsDateTimeOffset().NotNullable()
-                .WithColumn("ended_on").AsDateTimeOffset()
-                .WithColumn("duration").AsTime()
-                .WithColumn("is_active").AsBoolean().NotNullable();
+            Create.Table("Sessions")
+                .WithColumn("Id").AsInt64().PrimaryKey("sessions_pk").Identity()
+                .WithColumn("ServerId").AsInt64().ForeignKey("sessions_servers_fk", "Servers", "Id").NotNullable()
+                .WithColumn("UserId").AsInt64().ForeignKey("sessions_users_fk", "Users", "Id").NotNullable()
+                .WithColumn("StartedOn").AsDateTimeOffset().NotNullable()
+                .WithColumn("EndedOn").AsDateTimeOffset()
+                .WithColumn("Duration").AsTime()
+                .WithColumn("IsActive").AsBoolean().NotNullable();
 
-            Create.Table("admins")
-                .WithColumn("id").AsInt64().PrimaryKey("admins_pk").Identity()
-                .WithColumn("user_id").AsInt16().ForeignKey("admins_users_fk", "users", "id").NotNullable()
-                .WithColumn("created_on").AsDateTimeOffset().NotNullable()
-                .WithColumn("created_by").AsInt16().ForeignKey("admins_created_by", "users", "id").NotNullable();
+            Create.Table("Admins")
+                .WithColumn("Id").AsInt64().PrimaryKey("admins_pk").Identity()
+                .WithColumn("UserId").AsInt16().ForeignKey("admins_users_fk", "Users", "Id").NotNullable()
+                .WithColumn("CreatedOn").AsDateTimeOffset().NotNullable()
+                .WithColumn("CreatedBy").AsInt16().ForeignKey("admins_created_by", "Users", "Id").NotNullable();
         }
 
         public override void Down()
