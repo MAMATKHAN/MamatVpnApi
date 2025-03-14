@@ -7,9 +7,9 @@ namespace MamatVPN.DAL.Repositories
 {
     public class SqliteRepository : ISqliteRepository
     {
-        private readonly DbConnectionOption _dbConnectionOption;
+        private readonly DbConnectionOptions _dbConnectionOption;
 
-        public SqliteRepository(DbConnectionOption dbConnectionOption)
+        public SqliteRepository(DbConnectionOptions dbConnectionOption)
         {
             _dbConnectionOption = dbConnectionOption;
         }
