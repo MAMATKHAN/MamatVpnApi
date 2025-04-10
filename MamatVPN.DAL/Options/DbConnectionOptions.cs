@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MamatVPN.DAL.Options
 {
-    public class DbConnectionOption
+    public class DbConnectionOptions
     {
         public required string SqlLiteConnectionString { get; init; } = string.Empty;
     }
